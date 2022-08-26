@@ -1,0 +1,9 @@
+<p>stric works!</p>
+<ol>
+    <li *ngFor="let fruit of fruits">
+        
+        <span [ngClass]="fruit.delete == true ? 'striked' : 'unstriked'">{{fruit.name}}</span>
+        <button (click)="strike(fruit.name)" [style.visibility]="(fruit.delete == true) ? 'hidden' : 'visible'">strike</button> 
+        <button (click)="unstrike(fruit.name)" [style.visibility]="(fruit.delete == false) ? 'hidden' : 'visible'">unstrik</button>
+</ol>
+
